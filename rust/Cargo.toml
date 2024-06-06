@@ -1,0 +1,6 @@
+[workspace]
+members = [
+	"rustlib"
+]
+
+resolver = "2"
