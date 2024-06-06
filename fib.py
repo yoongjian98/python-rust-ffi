@@ -2,6 +2,7 @@ import time
 import random
 
 from python_rust_ffi import fibonacci, get_coordinate, bubble_sort;
+from file import reverse_file
 
 def fibonacci_py(nth):
 
@@ -28,19 +29,26 @@ def py_bubble_sort(nums):
                 nums_copy[j], nums_copy[j + 1] = nums_copy[j + 1], nums_copy[j]
     return nums_copy
 
-start_time = time.time()
-# fibonacci_py(num)
-py_bubble_sort(unsorted)
-end_time = time.time()
+# start_time = time.time()
+# # fibonacci_py(num)
+# py_bubble_sort(unsorted)
+# end_time = time.time()
 
+# execution_time = end_time - start_time
+# print("Python Execution time:", execution_time, "seconds")
+
+
+# start_time = time.time()
+# # fibonacci(num)
+# bubble_sort(unsorted)
+# end_time = time.time()
+
+# execution_time = end_time - start_time
+# print("Rust Execution time:", execution_time, "seconds")
+
+
+start_time = time.time()
+reverse_file("sample.txt")
+end_time = time.time()
 execution_time = end_time - start_time
 print("Python Execution time:", execution_time, "seconds")
-
-
-start_time = time.time()
-# fibonacci(num)
-bubble_sort(unsorted)
-end_time = time.time()
-
-execution_time = end_time - start_time
-print("Rust Execution time:", execution_time, "seconds")
